@@ -5,6 +5,7 @@ using System;
 /// </summary>
 /// 
 
+namespace CoinCollector.Scripts;
 
 public struct Keys
 {
