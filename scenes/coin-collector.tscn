@@ -2,13 +2,19 @@
 
 [ext_resource type="Script" uid="uid://dfy2yb2wkhppo" path="res://scenes/Player.cs" id="1_13n3n"]
 [ext_resource type="Texture2D" uid="uid://sab7dqy7cidx" path="res://assets/Player.png" id="1_gqmnp"]
+[ext_resource type="Texture2D" uid="uid://cjc7q40ugoo01" path="res://assets/Coin.png" id="3_evqh7"]
+[ext_resource type="Script" uid="uid://cp7btpqihxd8j" path="res://scenes/Coin.cs" id="3_hdab5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gqmnp"]
 size = Vector2(66, 92)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hdab5"]
+radius = 18.0
+
 [node name="Main" type="Node2D" unique_id=284220650]
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=750764767]
+position = Vector2(256, 128)
 script = ExtResource("1_13n3n")
 
 [node name="Sprite" type="Sprite2D" parent="Player" unique_id=560619748]
@@ -16,3 +22,14 @@ texture = ExtResource("1_gqmnp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=729092697]
 shape = SubResource("RectangleShape2D_gqmnp")
+
+[node name="Coin" type="Area2D" parent="." unique_id=957546295]
+position = Vector2(128, 128)
+script = ExtResource("3_hdab5")
+
+[node name="Coin" type="Sprite2D" parent="Coin" unique_id=1909641293]
+texture = ExtResource("3_evqh7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin" unique_id=96907406]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_hdab5")
