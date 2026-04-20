@@ -17,5 +17,10 @@ public partial class Coin : Area2D
 	private void OnBodyEntered(Node2D body)
 	{
 		Godot.GD.Print("Coin collected by ", body.Name);
+
+		const float ScaleFactor = 1.1f;
+		body.Scale = new Vector2(body.Scale.X * ScaleFactor, body.Scale.Y * ScaleFactor);
+
+		this.QueueFree(); //* Remove the coin from the scene
 	}
 }
