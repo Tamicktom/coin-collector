@@ -19,6 +19,8 @@ texture = ExtResource("1_gqmnp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=729092697]
 shape = SubResource("RectangleShape2D_gqmnp")
 
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1047558622]
+
 [node name="Coin" parent="." unique_id=142443374 instance=ExtResource("3_evqh7")]
 position = Vector2(57, 42)
 
